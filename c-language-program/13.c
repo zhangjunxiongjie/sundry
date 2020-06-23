@@ -1,32 +1,31 @@
 #include <stdio.h>
 void main()
 {
-	printf ("0123456789\n");
-	printf ("  ab c\tde\rf\tg\n");
-	printf ("h\ti\b\bj k\n");              //转义字符的使用//
-	printf ("i\b\b\n");
+	printf("0123456789\n");
+	printf("  ab c\tde\rf\tg\n");
+	printf("h\ti\b\bj k\n"); //转义字符的使用//
+	printf("i\b\b\n");
 }
 
-#include <stdio.h>  //转义字符的使用问题
-void main ()
+#include <stdio.h> //转义字符的使用问题
+void main()
 {
-	printf ("1234567812345678\n");
+	printf("1234567812345678\n");
 	printf("*\t");
 	printf("Very good!\n");
 	printf("c\b\v");
 	printf("a\n");
 }
 
-#include <stdio.h>  
+#include <stdio.h>
 int main()
 {
 	int a[1];
 	int b;
-	printf ("%d\n",a[1]);  //未赋初值变量直接输出
-	printf ("%d\n",b);
+	printf("%d\n", a[1]); //未赋初值变量直接输出
+	printf("%d\n", b);
 	return 0;
 }
-
 
 //一：仅当“\t”转义字符的使用使"目标字符"经过某些字符时所经过的字符均会被空格所覆盖
 //必须有目标字符经过如果没有目标字符仅有转移字符则不会覆盖空格
