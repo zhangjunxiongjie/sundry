@@ -15,7 +15,7 @@ for root, dirs, files in os.walk(fileDir):
         tempFile = ''
         # print(file)
         for i in range(len(file)):
-            if (file[i] == '-'):
+            if (file[i] == '-') or (file[i] == ' '):
                 tempFile += '_'
                 flag = True
             else:
@@ -32,7 +32,7 @@ for root, dirs, files in os.walk(fileDir):
         flag = False
         tempDir = ''
         for i in range(len(dir)):
-            if (dir[i] == '_'):
+            if (dir[i] == '_') or (dir[i] == ' '):
                 tempDir += '-'
                 flag = True
             else:
