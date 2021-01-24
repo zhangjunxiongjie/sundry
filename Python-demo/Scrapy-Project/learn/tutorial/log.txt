@@ -1,0 +1,20 @@
+2019-07-09 18:25:39 [tutorial.spiders.quotes_spider] WARNING: {'come_from': 'itcast'}
+2019-07-09 18:25:39 [tutorial.pipelines] WARNING: ----------
+2019-07-09 18:25:39 [tutorial.spiders.quotes_spider] WARNING: {'come_from': 'itcast'}
+2019-07-09 18:25:39 [tutorial.pipelines] WARNING: ----------
+2019-07-09 18:25:39 [tutorial.spiders.quotes_spider] WARNING: {'come_from': 'itcast'}
+2019-07-09 18:25:39 [tutorial.pipelines] WARNING: ----------
+2019-07-09 18:25:39 [tutorial.spiders.quotes_spider] WARNING: {'come_from': 'itcast'}
+2019-07-09 18:25:39 [tutorial.pipelines] WARNING: ----------
+2019-07-09 18:25:39 [tutorial.spiders.quotes_spider] WARNING: {'come_from': 'itcast'}
+2019-07-09 18:25:39 [tutorial.pipelines] WARNING: ----------
+2019-07-09 18:25:39 [tutorial.spiders.quotes_spider] WARNING: {'come_from': 'itcast'}
+2019-07-09 18:25:39 [tutorial.pipelines] WARNING: ----------
+2019-07-09 18:25:39 [tutorial.spiders.quotes_spider] WARNING: {'come_from': 'itcast'}
+2019-07-09 18:25:39 [tutorial.pipelines] WARNING: ----------
+2019-07-09 18:25:39 [tutorial.spiders.quotes_spider] WARNING: {'come_from': 'itcast'}
+2019-07-09 18:25:39 [tutorial.pipelines] WARNING: ----------
+2019-07-09 18:25:39 [tutorial.spiders.quotes_spider] WARNING: {'come_from': 'itcast'}
+2019-07-09 18:25:39 [tutorial.pipelines] WARNING: ----------
+2019-07-09 18:25:39 [tutorial.spiders.quotes_spider] WARNING: {'come_from': 'itcast'}
+2019-07-09 18:25:39 [tutorial.pipelines] WARNING: ----------
