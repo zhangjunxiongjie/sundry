@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/murongyuyue/mypreload
+CMAKE_SOURCE_DIR = /home/murongyuyue/user-interface
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/murongyuyue/mypreload/build
+CMAKE_BINARY_DIR = /home/murongyuyue/user-interface
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/murongyuyue/mypreload/build/CMakeFiles /home/murongyuyue/mypreload/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/murongyuyue/user-interface/CMakeFiles /home/murongyuyue/user-interface/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/murongyuyue/mypreload/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/murongyuyue/user-interface/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,125 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named start
+# Target rules for targets named access_control.out
 
 # Build rule for target.
-start: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 start
-.PHONY : start
+access_control.out: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 access_control.out
+.PHONY : access_control.out
 
 # fast build rule for target.
-start/fast:
-	$(MAKE) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/build
-.PHONY : start/fast
+access_control.out/fast:
+	$(MAKE) -f CMakeFiles/access_control.out.dir/build.make CMakeFiles/access_control.out.dir/build
+.PHONY : access_control.out/fast
 
-arithmetic.o: arithmetic.c.o
+access_control.o: access_control.c.o
 
-.PHONY : arithmetic.o
-
-# target to build an object file
-arithmetic.c.o:
-	$(MAKE) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/arithmetic.c.o
-.PHONY : arithmetic.c.o
-
-arithmetic.i: arithmetic.c.i
-
-.PHONY : arithmetic.i
-
-# target to preprocess a source file
-arithmetic.c.i:
-	$(MAKE) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/arithmetic.c.i
-.PHONY : arithmetic.c.i
-
-arithmetic.s: arithmetic.c.s
-
-.PHONY : arithmetic.s
-
-# target to generate assembly for a file
-arithmetic.c.s:
-	$(MAKE) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/arithmetic.c.s
-.PHONY : arithmetic.c.s
-
-intercept_syscall.o: intercept_syscall.c.o
-
-.PHONY : intercept_syscall.o
+.PHONY : access_control.o
 
 # target to build an object file
-intercept_syscall.c.o:
-	$(MAKE) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/intercept_syscall.c.o
-.PHONY : intercept_syscall.c.o
+access_control.c.o:
+	$(MAKE) -f CMakeFiles/access_control.out.dir/build.make CMakeFiles/access_control.out.dir/access_control.c.o
+.PHONY : access_control.c.o
 
-intercept_syscall.i: intercept_syscall.c.i
+access_control.i: access_control.c.i
 
-.PHONY : intercept_syscall.i
-
-# target to preprocess a source file
-intercept_syscall.c.i:
-	$(MAKE) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/intercept_syscall.c.i
-.PHONY : intercept_syscall.c.i
-
-intercept_syscall.s: intercept_syscall.c.s
-
-.PHONY : intercept_syscall.s
-
-# target to generate assembly for a file
-intercept_syscall.c.s:
-	$(MAKE) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/intercept_syscall.c.s
-.PHONY : intercept_syscall.c.s
-
-start.o: start.c.o
-
-.PHONY : start.o
-
-# target to build an object file
-start.c.o:
-	$(MAKE) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/start.c.o
-.PHONY : start.c.o
-
-start.i: start.c.i
-
-.PHONY : start.i
+.PHONY : access_control.i
 
 # target to preprocess a source file
-start.c.i:
-	$(MAKE) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/start.c.i
-.PHONY : start.c.i
+access_control.c.i:
+	$(MAKE) -f CMakeFiles/access_control.out.dir/build.make CMakeFiles/access_control.out.dir/access_control.c.i
+.PHONY : access_control.c.i
 
-start.s: start.c.s
+access_control.s: access_control.c.s
 
-.PHONY : start.s
-
-# target to generate assembly for a file
-start.c.s:
-	$(MAKE) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/start.c.s
-.PHONY : start.c.s
-
-syscall_logger.o: syscall_logger.c.o
-
-.PHONY : syscall_logger.o
-
-# target to build an object file
-syscall_logger.c.o:
-	$(MAKE) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/syscall_logger.c.o
-.PHONY : syscall_logger.c.o
-
-syscall_logger.i: syscall_logger.c.i
-
-.PHONY : syscall_logger.i
-
-# target to preprocess a source file
-syscall_logger.c.i:
-	$(MAKE) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/syscall_logger.c.i
-.PHONY : syscall_logger.c.i
-
-syscall_logger.s: syscall_logger.c.s
-
-.PHONY : syscall_logger.s
+.PHONY : access_control.s
 
 # target to generate assembly for a file
-syscall_logger.c.s:
-	$(MAKE) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/syscall_logger.c.s
-.PHONY : syscall_logger.c.s
+access_control.c.s:
+	$(MAKE) -f CMakeFiles/access_control.out.dir/build.make CMakeFiles/access_control.out.dir/access_control.c.s
+.PHONY : access_control.c.s
 
 # Help Target
 help:
@@ -239,19 +158,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... start"
-	@echo "... arithmetic.o"
-	@echo "... arithmetic.i"
-	@echo "... arithmetic.s"
-	@echo "... intercept_syscall.o"
-	@echo "... intercept_syscall.i"
-	@echo "... intercept_syscall.s"
-	@echo "... start.o"
-	@echo "... start.i"
-	@echo "... start.s"
-	@echo "... syscall_logger.o"
-	@echo "... syscall_logger.i"
-	@echo "... syscall_logger.s"
+	@echo "... access_control.out"
+	@echo "... access_control.o"
+	@echo "... access_control.i"
+	@echo "... access_control.s"
 .PHONY : help
 
 
