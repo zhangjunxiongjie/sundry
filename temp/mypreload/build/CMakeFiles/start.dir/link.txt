@@ -1,0 +1,1 @@
+/bin/x86_64-linux-gnu-gcc-9 -fPIC -g  -shared -Wl,-soname,libstart.so -o libstart.so CMakeFiles/start.dir/start.c.o CMakeFiles/start.dir/intercept_syscall.c.o CMakeFiles/start.dir/syscall_logger.c.o CMakeFiles/start.dir/arithmetic.c.o  -lsyscall_intercept 

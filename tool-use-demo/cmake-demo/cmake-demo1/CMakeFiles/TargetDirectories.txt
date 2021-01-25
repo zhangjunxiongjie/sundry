@@ -1,0 +1,3 @@
+/home/murongyuyue/Desktop/sundry/tool-use-demo/cmake-demo/CMakeFiles/rebuild_cache.dir
+/home/murongyuyue/Desktop/sundry/tool-use-demo/cmake-demo/CMakeFiles/edit_cache.dir
+/home/murongyuyue/Desktop/sundry/tool-use-demo/cmake-demo/CMakeFiles/cmake_demo.out.dir

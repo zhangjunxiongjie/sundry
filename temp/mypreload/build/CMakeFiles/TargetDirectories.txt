@@ -1,0 +1,3 @@
+/home/murongyuyue/mypreload/build/CMakeFiles/rebuild_cache.dir
+/home/murongyuyue/mypreload/build/CMakeFiles/edit_cache.dir
+/home/murongyuyue/mypreload/build/CMakeFiles/start.dir

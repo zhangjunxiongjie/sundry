@@ -1,0 +1,1 @@
+/usr/bin/cc    CMakeFiles/cmake_demo.out.dir/main.c.o CMakeFiles/cmake_demo.out.dir/max.c.o CMakeFiles/cmake_demo.out.dir/min.c.o  -o cmake_demo.out 
