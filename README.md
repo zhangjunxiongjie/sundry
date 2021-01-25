@@ -5,9 +5,10 @@
 - Linux-system-program   Linux 系统编程示例；
 - luogu-question-bank   洛谷题解；
 - PAT-basic-level-practice   PAT 题解；
-- program-function   常用函数；
+- program-function   编程函数；
 - Python-demo   python 小程序；
 - Script-tools   python,shell 脚本工具；
-- VS-poject   Visual Studio 项目；
+- tool-use-demo   makefile，cmake 使用的小示例；
 - UNIX-tools   UNIX 终端小工具；
+- VS-poject   Visual Studio 项目；
 - AssemblerLanguageProgramming   8051 汇编语言程序设计概述；
