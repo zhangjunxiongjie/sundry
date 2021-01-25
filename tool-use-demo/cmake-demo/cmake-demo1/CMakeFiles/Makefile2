@@ -44,16 +44,16 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/murongyuyue/Desktop/sundry/tool-use-demo/cmake-demo
+CMAKE_SOURCE_DIR = /home/murongyuyue/Desktop/sundry/tool-use-demo/cmake-demo/cmake-demo1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/murongyuyue/Desktop/sundry/tool-use-demo/cmake-demo
+CMAKE_BINARY_DIR = /home/murongyuyue/Desktop/sundry/tool-use-demo/cmake-demo/cmake-demo1
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/cmake_demo.out.dir/all
+all: CMakeFiles/demo1.out.dir/all
 
 .PHONY : all
 
@@ -63,36 +63,36 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/cmake_demo.out.dir/clean
+clean: CMakeFiles/demo1.out.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/cmake_demo.out.dir
+# Target rules for target CMakeFiles/demo1.out.dir
 
 # All Build rule for target.
-CMakeFiles/cmake_demo.out.dir/all:
-	$(MAKE) -f CMakeFiles/cmake_demo.out.dir/build.make CMakeFiles/cmake_demo.out.dir/depend
-	$(MAKE) -f CMakeFiles/cmake_demo.out.dir/build.make CMakeFiles/cmake_demo.out.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/murongyuyue/Desktop/sundry/tool-use-demo/cmake-demo/CMakeFiles --progress-num=1,2,3,4 "Built target cmake_demo.out"
-.PHONY : CMakeFiles/cmake_demo.out.dir/all
+CMakeFiles/demo1.out.dir/all:
+	$(MAKE) -f CMakeFiles/demo1.out.dir/build.make CMakeFiles/demo1.out.dir/depend
+	$(MAKE) -f CMakeFiles/demo1.out.dir/build.make CMakeFiles/demo1.out.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/murongyuyue/Desktop/sundry/tool-use-demo/cmake-demo/cmake-demo1/CMakeFiles --progress-num=1,2,3,4 "Built target demo1.out"
+.PHONY : CMakeFiles/demo1.out.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/cmake_demo.out.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/murongyuyue/Desktop/sundry/tool-use-demo/cmake-demo/CMakeFiles 4
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/cmake_demo.out.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/murongyuyue/Desktop/sundry/tool-use-demo/cmake-demo/CMakeFiles 0
-.PHONY : CMakeFiles/cmake_demo.out.dir/rule
+CMakeFiles/demo1.out.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/murongyuyue/Desktop/sundry/tool-use-demo/cmake-demo/cmake-demo1/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/demo1.out.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/murongyuyue/Desktop/sundry/tool-use-demo/cmake-demo/cmake-demo1/CMakeFiles 0
+.PHONY : CMakeFiles/demo1.out.dir/rule
 
 # Convenience name for target.
-cmake_demo.out: CMakeFiles/cmake_demo.out.dir/rule
+demo1.out: CMakeFiles/demo1.out.dir/rule
 
-.PHONY : cmake_demo.out
+.PHONY : demo1.out
 
 # clean rule for target.
-CMakeFiles/cmake_demo.out.dir/clean:
-	$(MAKE) -f CMakeFiles/cmake_demo.out.dir/build.make CMakeFiles/cmake_demo.out.dir/clean
-.PHONY : CMakeFiles/cmake_demo.out.dir/clean
+CMakeFiles/demo1.out.dir/clean:
+	$(MAKE) -f CMakeFiles/demo1.out.dir/build.make CMakeFiles/demo1.out.dir/clean
+.PHONY : CMakeFiles/demo1.out.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

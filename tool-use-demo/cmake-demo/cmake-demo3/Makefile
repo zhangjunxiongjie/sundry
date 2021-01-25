@@ -48,24 +48,13 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/murongyuyue/Desktop/sundry/tool-use-demo/cmake-demo/cmake-demo1
+CMAKE_SOURCE_DIR = /home/murongyuyue/Desktop/sundry/tool-use-demo/cmake-demo/cmake-demo3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/murongyuyue/Desktop/sundry/tool-use-demo/cmake-demo/cmake-demo1
+CMAKE_BINARY_DIR = /home/murongyuyue/Desktop/sundry/tool-use-demo/cmake-demo/cmake-demo3
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -78,11 +67,22 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/murongyuyue/Desktop/sundry/tool-use-demo/cmake-demo/cmake-demo1/CMakeFiles /home/murongyuyue/Desktop/sundry/tool-use-demo/cmake-demo/cmake-demo1/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/murongyuyue/Desktop/sundry/tool-use-demo/cmake-demo/cmake-demo3/CMakeFiles /home/murongyuyue/Desktop/sundry/tool-use-demo/cmake-demo/cmake-demo3/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/murongyuyue/Desktop/sundry/tool-use-demo/cmake-demo/cmake-demo1/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/murongyuyue/Desktop/sundry/tool-use-demo/cmake-demo/cmake-demo3/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,98 +111,71 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named demo1.out
+# Target rules for targets named demo3.out
 
 # Build rule for target.
-demo1.out: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 demo1.out
-.PHONY : demo1.out
+demo3.out: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 demo3.out
+.PHONY : demo3.out
 
 # fast build rule for target.
-demo1.out/fast:
-	$(MAKE) -f CMakeFiles/demo1.out.dir/build.make CMakeFiles/demo1.out.dir/build
-.PHONY : demo1.out/fast
+demo3.out/fast:
+	$(MAKE) -f CMakeFiles/demo3.out.dir/build.make CMakeFiles/demo3.out.dir/build
+.PHONY : demo3.out/fast
 
-main.o: main.c.o
+MathFunctions.o: MathFunctions.cc.o
+
+.PHONY : MathFunctions.o
+
+# target to build an object file
+MathFunctions.cc.o:
+	$(MAKE) -f CMakeFiles/demo3.out.dir/build.make CMakeFiles/demo3.out.dir/MathFunctions.cc.o
+.PHONY : MathFunctions.cc.o
+
+MathFunctions.i: MathFunctions.cc.i
+
+.PHONY : MathFunctions.i
+
+# target to preprocess a source file
+MathFunctions.cc.i:
+	$(MAKE) -f CMakeFiles/demo3.out.dir/build.make CMakeFiles/demo3.out.dir/MathFunctions.cc.i
+.PHONY : MathFunctions.cc.i
+
+MathFunctions.s: MathFunctions.cc.s
+
+.PHONY : MathFunctions.s
+
+# target to generate assembly for a file
+MathFunctions.cc.s:
+	$(MAKE) -f CMakeFiles/demo3.out.dir/build.make CMakeFiles/demo3.out.dir/MathFunctions.cc.s
+.PHONY : MathFunctions.cc.s
+
+main.o: main.cc.o
 
 .PHONY : main.o
 
 # target to build an object file
-main.c.o:
-	$(MAKE) -f CMakeFiles/demo1.out.dir/build.make CMakeFiles/demo1.out.dir/main.c.o
-.PHONY : main.c.o
+main.cc.o:
+	$(MAKE) -f CMakeFiles/demo3.out.dir/build.make CMakeFiles/demo3.out.dir/main.cc.o
+.PHONY : main.cc.o
 
-main.i: main.c.i
+main.i: main.cc.i
 
 .PHONY : main.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles/demo1.out.dir/build.make CMakeFiles/demo1.out.dir/main.c.i
-.PHONY : main.c.i
+main.cc.i:
+	$(MAKE) -f CMakeFiles/demo3.out.dir/build.make CMakeFiles/demo3.out.dir/main.cc.i
+.PHONY : main.cc.i
 
-main.s: main.c.s
+main.s: main.cc.s
 
 .PHONY : main.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles/demo1.out.dir/build.make CMakeFiles/demo1.out.dir/main.c.s
-.PHONY : main.c.s
-
-max.o: max.c.o
-
-.PHONY : max.o
-
-# target to build an object file
-max.c.o:
-	$(MAKE) -f CMakeFiles/demo1.out.dir/build.make CMakeFiles/demo1.out.dir/max.c.o
-.PHONY : max.c.o
-
-max.i: max.c.i
-
-.PHONY : max.i
-
-# target to preprocess a source file
-max.c.i:
-	$(MAKE) -f CMakeFiles/demo1.out.dir/build.make CMakeFiles/demo1.out.dir/max.c.i
-.PHONY : max.c.i
-
-max.s: max.c.s
-
-.PHONY : max.s
-
-# target to generate assembly for a file
-max.c.s:
-	$(MAKE) -f CMakeFiles/demo1.out.dir/build.make CMakeFiles/demo1.out.dir/max.c.s
-.PHONY : max.c.s
-
-min.o: min.c.o
-
-.PHONY : min.o
-
-# target to build an object file
-min.c.o:
-	$(MAKE) -f CMakeFiles/demo1.out.dir/build.make CMakeFiles/demo1.out.dir/min.c.o
-.PHONY : min.c.o
-
-min.i: min.c.i
-
-.PHONY : min.i
-
-# target to preprocess a source file
-min.c.i:
-	$(MAKE) -f CMakeFiles/demo1.out.dir/build.make CMakeFiles/demo1.out.dir/min.c.i
-.PHONY : min.c.i
-
-min.s: min.c.s
-
-.PHONY : min.s
-
-# target to generate assembly for a file
-min.c.s:
-	$(MAKE) -f CMakeFiles/demo1.out.dir/build.make CMakeFiles/demo1.out.dir/min.c.s
-.PHONY : min.c.s
+main.cc.s:
+	$(MAKE) -f CMakeFiles/demo3.out.dir/build.make CMakeFiles/demo3.out.dir/main.cc.s
+.PHONY : main.cc.s
 
 # Help Target
 help:
@@ -210,18 +183,15 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... demo1.out"
+	@echo "... edit_cache"
+	@echo "... demo3.out"
+	@echo "... MathFunctions.o"
+	@echo "... MathFunctions.i"
+	@echo "... MathFunctions.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... max.o"
-	@echo "... max.i"
-	@echo "... max.s"
-	@echo "... min.o"
-	@echo "... min.i"
-	@echo "... min.s"
 .PHONY : help
 
 
