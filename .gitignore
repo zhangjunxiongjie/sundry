@@ -4,6 +4,8 @@ CMakeFiles/
 build/
 CMakeCache.txt
 cmake_install.cmake
+.vs/
+.vscode/
 
 License.txt
 
