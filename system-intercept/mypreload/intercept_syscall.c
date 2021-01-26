@@ -9,27 +9,31 @@ long intercept_openat(long syscall_number,
 {
     long fd = syscall_no_intercept(syscall_number, arg0, arg1, arg2, arg3, arg4, arg5);
 
-    // ignore config and log file.
+    struct stat path_stat;
+    memset(&path_stat, 0, sizeof(struct stat));
+    stat(FileName, &path_stat); // get stat
+    mode_t pathMode = path_stat.st_mode;
+    off_t pathSize = path_stat.st_size;
+    
+    // ignore policy and log file.
     if (ignore_match(FileName) == 0){
         return fd;
     }
-    else if (keywords_match(FileName) == 0) // match directory
-    {
+    else if (keywords_match(FileName) == 0){ // path match.
         write_intercept_log(FileName);
         return -1;
     }
-    else if (fd > 0)
-    { 
-        // match time too much long!!!
-        char buffer[BUFMAXSIZE + 1];
-        memset(buffer, '\0', (BUFMAXSIZE + 1));
-        long readBytes = 0;
-        while ((readBytes = syscall_no_intercept(SYS_read, fd, (long)buffer, BUFMAXSIZE)) > 0) // overflow
+    else if (fd != -1 && S_ISREG(pathMode)){ // content keyword match. only match common file. 
+        char *buffer = (char *)malloc(pathSize + 1); // ??? request
+        memset(buffer, '\0', (pathSize + 1));
+
+        if (syscall_no_intercept(SYS_read, fd, (long)buffer, pathSize) == pathSize) // overflow
         {
-            buffer[readBytes] = '\0';
+            buffer[pathSize] = '\0';
             if (keywords_match(buffer) == 0)
             {
                 syscall_no_intercept(SYS_close, fd);
+                free(buffer);
 
                 write_intercept_log(FileName);
                 return -1;
@@ -38,12 +42,17 @@ long intercept_openat(long syscall_number,
 
         // move file pointer to file begin.
         syscall_no_intercept(SYS_lseek, fd, 0, SEEK_SET, arg3, arg4, arg5);
+        free(buffer);
+
         return fd;
     }
-    else
-    {   
-        // file open error.
-        return -1;
+    else {
+        if (fd == -1){
+            return syscall_no_intercept(syscall_number, arg0, arg1, arg2, arg3, arg4, arg5);
+        }
+        else {
+            return fd;    
+        }
     }
 }
 
