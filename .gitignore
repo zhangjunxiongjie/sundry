@@ -1,9 +1,11 @@
 
 # build file
 CMakeFiles/
+build/
 CMakeCache.txt
 cmake_install.cmake
 
+License.txt
 
 # Prerequisites
 *.d
