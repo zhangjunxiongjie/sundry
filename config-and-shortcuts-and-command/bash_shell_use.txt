@@ -1,0 +1,39 @@
+
+# other
+	wc # total.
+	
+	ssh -p port user@host # ssh login.
+	ssh-keygen # creat key.
+
+# program build.
+	make -j(number) # multi core build.
+
+# command line use.
+	info command
+	man command
+	whatis command
+	whereis command
+	which command
+
+
+# system informantion.
+	sudo -i # shift to root use current user password.
+	uname # system core informantion.
+
+
+# network config
+	# add network adapter's ip address.
+	sudo ifconfig enp2s0:0 192.168.6.155 netmask 255.255.255.0 broadcast 192.168.6.255 up
+
+# file manage 
+
+	mkdir postfix{1..2} # mkdir postfix1 postfix2 postfix3...
+
+	tar -cvf file.tar file # zip
+	tar -czf file.tar.gz file # zip
+
+	tar -zxvf file.tar.gz file # unzip
+	tar -xvf file.tar # unzip
+	
+	unzip file.zip # unzip
+	

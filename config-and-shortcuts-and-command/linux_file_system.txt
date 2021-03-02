@@ -1,0 +1,20 @@
+
+
+# file type.
+so(linux.elf)  dll(windows). # dynamic library.
+a(linux.elf) lib(windows). # static library.
+out(liunx.elf) exe(windows.PE). # executable file.
+
+# compile file type.
+c,h --(precompile)--> i --(compile)--> asm(s,a,assembly) --(assembly)--> o --(link)--> out,a,so(executable).
+
+
+
+# system console.
+/dev/console
+
+# terminal.
+/dev/tty
+
+# null device.
+/dev/null 

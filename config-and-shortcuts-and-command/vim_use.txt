@@ -1,0 +1,44 @@
+# command line model.
+	esc # shift to normal model.	
+
+	Tab # auto complement.
+
+	split filename # open file by split.
+	vsplit filename # open file by vsplit.
+
+	q! # quit.
+	x # x == wq, save and quit.
+	wq # save and quit.
+
+# normal model.
+	i # shift to insert model. 
+	: # shift to command line model.
+
+	/ # search word.
+	Ctrl + w + h,j,k,l # shift edit window.
+	
+	$ # jump line tail.
+	^ # jump line head.
+	G # jump file tail.
+	gg # jump file head.
+	
+	o # down insert one line and into insert model.
+	O # up insert one line and into insert model.
+
+	u # undo.
+	h,j,k,l # left down up right.	
+
+	number + dd # cut number line.
+	yy copy # line
+	p # paste
+	x # delete ont letter.
+
+# insert model.
+	esc # shift to normal model.
+
+## auto complement
+	Ctrl + p # 
+	Ctrl + n # next item
+
+
+

@@ -1,0 +1,32 @@
+
+
+
+#
+git clone 
+
+#
+git pull
+
+# 
+git add filename
+
+#
+git commit -m ""
+
+# 
+git push
+
+# 
+git log
+
+#
+git status
+
+#
+git branch
+
+#
+git checkout
+
+# 
+git merge

@@ -1,0 +1,37 @@
+
+
+
+# other debug tool.
+ldd # look executable file's rely on.
+nm # list object file's or share library's symbol table.
+strace # trace process running syscall.
+objdump # look assembly code. bin file parse.
+readelf # parse elf type file.
+pstack # trace process stack space.
+od # look bin file.
+backtrace # trace function call stack.
+valgrind # memory leakage debug.
+
+
+$ gcc -g main.c -o main.elf
+$ gdb main.elf
+
+# other commandline.
+file # add debug file.
+print # print variable value.
+disassemble # disassembling.
+
+# condition breakpoint. 
+
+# content breakpoint.
+start # one step debug.
+next # continue run.
+
+run # run to break.
+breakpoint # add breakpoint.
+
+# memory breakpoint.
+awatch # read write breakpoint.
+rwatch # read breakpoint.
+watch # write breakpoint.
+

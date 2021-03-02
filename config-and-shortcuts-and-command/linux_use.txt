@@ -1,0 +1,21 @@
+
+
+# paste line.
+Shift + Ins
+
+# copy line.
+Ctrl + Ins
+
+# fg bg jobs.
+Ctrl + z
+
+# break process.
+Ctrl + c
+
+# end of file.
+Ctrl + d
+
+# add one terminal.
+Ctrl + Shift + t 
+# open one terminal.
+Ctrl + Alt + t
