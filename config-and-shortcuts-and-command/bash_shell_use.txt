@@ -20,6 +20,10 @@
 	sudo -i # shift to root use current user password.
 	uname # system core informantion.
 
+	# watch -n 0.1的意思是以0.1秒的时间间隔刷新nvidia-smi的数据显示，显卡内存监控
+	watch -n 0.1 nvidia-smi 
+
+	watch -n 0.1 free -h # free是内存显示命令，-h是以人类能读懂的格式显示
 
 # network config
 	# add network adapter's ip address.
