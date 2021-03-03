@@ -1,8 +1,8 @@
 
 # config vim
-sudo cp -r ./vim_runtime /opt/
-sudo chmod a+x /opt/vim_runtime/install_awesome_parameterized.sh
-sudo /opt/vim_runtime/install_awesome_parameterized.sh /opt/run_time --all
+sudo cp -r ./vim-runtime /opt/
+sudo chmod a+x /opt/vim-runtime/install_awesome_parameterized.sh
+sudo /opt/vim-runtime/install_awesome_parameterized.sh /opt/vim-runtime --all
 
 # install 'oh my zsh' pulg manage of zsh.
 # wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O ~/Downloads/ohmyzsh
