@@ -1,5 +1,6 @@
 
 
+
 # paste line.
 Shift + Ins
 
@@ -18,7 +19,18 @@ Ctrl + d
 # end of file.
 Ctrl + d
 
+# large terminal.
+Ctrl + Shift + +
+Ctrl + '+'
+
+# small terminal.
+Ctrl + '-'
+
 # add one terminal.
-Ctrl + Shift + t 
+Ctrl + Shift + t
+Ctrl + 'T'
+
 # open one terminal.
 Ctrl + Alt + t
+
+
