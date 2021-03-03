@@ -1,21 +1,21 @@
 
-# look commit but no push
+# look commit
 git commit -a
+
+#
+git commit -m ""
 
 # cancel trace
 git rm -r directory
+
+# add trace
+git add filename
 
 #
 git clone
 
 #
 git pull
-
-#
-git add filename
-
-#
-git commit -m ""
 
 #
 git push
@@ -34,3 +34,7 @@ git checkout
 
 #
 git merge
+
+#
+git rebase
+
