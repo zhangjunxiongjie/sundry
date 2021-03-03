@@ -12,6 +12,9 @@ Ctrl + z
 # break process.
 Ctrl + c
 
+# close one terminal.
+Ctrl + d
+
 # end of file.
 Ctrl + d
 
