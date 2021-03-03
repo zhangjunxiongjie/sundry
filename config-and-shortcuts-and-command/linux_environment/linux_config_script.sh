@@ -1,4 +1,13 @@
 
+# config gdb
+mkdir ~/.gdb
+cp -r ./gdb-plugins ~/.gdb/
+echo "source ~/.gdb/gdb-plugins/peda.py" > ~/.gdbinit
+echo "source ~/.gdb/gdb-plugins/gef/gef.py" > ~/.gdbinit
+echo "source ~/.gdb/gdb-plugins/gdbinit/gdbinit" > ~/.gdbinit
+
+echo 'configuration gdb successful!!!'
+
 # config vim
 sudo cp -r ./vim-runtime /opt/
 sudo chmod a+x /opt/vim-runtime/install_awesome_parameterized.sh
