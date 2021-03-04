@@ -1,0 +1,47 @@
+
+预处理文件扩展名：.r (replace 替换)
+编译后文件扩展名：.a (asm 汇编)
+汇编后文件扩展名：.o (object 目标文件)
+链接后文件扩展名：.out(output 输出文件)
+gdb调试文件扩展名：.elf(调试文件带一些 symbol符号 信息)
+
+预处理(.r)->编译(.a)->汇编(.o)->链接(.out)
+
+生成静态库文件 dynamic
+
+生成动态库文件 static
+
+
+-g 给目标文件添加调试信息
+gcc -g main.c -o main.elf 生成 gdb 可调试的 elf 文件
+
+-x language filename
+设定文件所使用的语言, 使后缀名无效, 对以后的多个有效。也就是根据约定 C 语言的后缀名称是 .c 的，而 C++ 的后缀名是 .C 或者 .cpp, 如果你很个性，决定你的 C 代码文件的后缀名是 .pig 哈哈，那你就要用这个参数, 这个参数对他后面的文件名都起作用，除非到了下一个参数的使用。 可以使用的参数有下面的这些：'c', 'objective-c', 'c-header', 'c++', 'cpp-output', 'assembler', 与 'assembler-with-cpp'。
+例子用法:
+gcc -x c hello.pig 　　
+
+　　
+-c
+只激活预处理,编译,和汇编,也就是他只把程序做成obj文件
+例子用法:
+gcc -c hello.c 
+他将生成 .o 的 obj 文件
+
+-S
+只激活预处理和编译，就是指把文件编译成为汇编代码。
+例子用法:
+gcc -S hello.c 
+他将生成 .s 的汇编代码，你可以用文本编辑器察看。
+
+-E
+只激活预处理,这个不生成文件, 你需要把它重定向到一个输出文件里面。
+例子用法:
+gcc -E hello.c > pianoapan.r (replace 替换) 
+gcc -E hello.c | more 
+
+-o
+制定目标名称, 默认的时候, gcc 编译出来的文件是 a.out, 很难听, 如果你和我有同感，改掉它, 哈哈。
+例子用法:
+gcc -o hello.exe hello.c (哦,windows用习惯了) 
+gcc -o hello.asm -S hello.c
+
