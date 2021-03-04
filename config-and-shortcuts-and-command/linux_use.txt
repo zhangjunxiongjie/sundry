@@ -13,9 +13,11 @@ Ctrl + Ins
 
 # fg bg jobs.
 Ctrl + z
+Ctrl + Z 将程序放入后台运行
 
 # break process.
 Ctrl + c
+Ctrl + C 将程序中断
 
 # close one terminal.
 Ctrl + d

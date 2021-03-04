@@ -1,10 +1,15 @@
 
+
 # other
+	tmux # 终端会话管理
+	htop # 系统监视功能
+	systemctl # 管理系统服务
+	
 	source config_file # config file action
     wc # total.
 
 	ssh -p port user@host # ssh login.
-	ssh-keygen # creat key.
+	ssh-keygen # create key.
 
 # program build.
 	make -j(number) # multi core build.
@@ -16,10 +21,18 @@
 	whereis command
 	which command
 
+# process manage
+	bg job_number 将前台程序放到后台
+	fg job_number 将后台程序放到前台
+	jobs 列出后台运行程序
 
-# system informantion.
+	sudo lsof -i:port # 查看使用此端口号的进程；
+
+
+# system information.
+
 	sudo -i # shift to root use current user password.
-	uname # system core informantion.
+	uname # system core information.
 
 	# watch -n 0.1的意思是以0.1秒的时间间隔刷新nvidia-smi的数据显示，显卡内存监控
 	watch -n 0.1 nvidia-smi

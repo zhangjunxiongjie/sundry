@@ -16,6 +16,7 @@
 
 	/ # search word.
 	Ctrl + w + h,j,k,l # shift edit window.
+	Ctrl + w + ↑↓   可改变编辑窗口。
 	
 	$ # jump line tail.
 	^ # jump line head.
@@ -39,6 +40,4 @@
 ## auto complement
 	Ctrl + p # 
 	Ctrl + n # next item
-
-
 

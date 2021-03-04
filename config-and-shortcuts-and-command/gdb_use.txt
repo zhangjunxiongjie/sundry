@@ -1,5 +1,7 @@
 
 
+info thread # 查看线程信息
+thread thread_id # 切换工作线程
 
 # other debug tool.
 ldd # look executable file's rely on.
@@ -35,3 +37,24 @@ awatch # read write breakpoint.
 rwatch # read breakpoint.
 watch # write breakpoint.
 
+
+
+gdb
+gcc -g 可生成待调试信息的输出文件。
+gdb filename.elf;
+l 从第一行开始列出源码。
+直接回车可重复执行上一次命令。
+b line_number 在 line_number 处打上断点。
+b function_name 在某个函数入口处打上断点。breakpoint
+r run 开始调试运行;
+n next 单步运行（单步调试）（如果遇到函数会直接跳出。）;
+s 进入函数内部执行;
+c continue 继续运行;
+p variable_name printf 打印变量值;
+bt 查看函数堆栈;
+f stack_id 切换堆栈到stack_id，stack_id 使用 bt 查看;
+finish 退出函数;
+q quit 退出 gdb;
+info breakpoints 打印断点信息;
+start 单步执行;
+next 执行下一步;

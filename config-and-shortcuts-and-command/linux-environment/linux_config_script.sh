@@ -3,9 +3,9 @@
 mkdir ~/.gdb
 cp -r ./gdb-plugins ~/.gdb/
 rm ~/.gdbinit
-echo "source ~/.gdb/gdb-plugins/peda/peda.py" >> ~/.gdbinit
+# echo "source ~/.gdb/gdb-plugins/peda/peda.py" >> ~/.gdbinit
 echo "source ~/.gdb/gdb-plugins/gef/gef.py" >> ~/.gdbinit
-echo "source ~/.gdb/gdb-plugins/gdbinit/gdbinit" >> ~/.gdbinit
+# echo "source ~/.gdb/gdb-plugins/gdbinit/gdbinit" >> ~/.gdbinit
 
 echo 'configuration gdb successful!!!'
 
@@ -26,7 +26,7 @@ cp -r ./ohmyzsh ~/.oh-my-zsh #
 cp ./zsh_config_file.txt ~/.zshrc # config
 
 sudo apt install zsh # shell
-chsh -s /bin/zsh # chang default shell
+sudo chsh -s /bin/zsh # chang default shell
 
 echo 'configuration shell successful!!!'
 
