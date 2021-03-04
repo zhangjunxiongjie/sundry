@@ -8,8 +8,8 @@
 - program-function   编程函数；
 - Python-demo   python 小程序；
 - script-tools   python,shell 脚本工具；
-- system-intercept   linux glibc 系统 hook； 
+- system-intercept   linux glibc 系统 hook；
 - tool-use-demo   makefile，cmake 使用的小示例；
 - UNIX-system-programming   UNIX 系统编程 代码示例；
-- VS-poject   Visual Studio 项目；
+- VS-project   Visual Studio 项目；
 - AssemblerLanguageProgramming   8051 汇编语言程序设计概述；
