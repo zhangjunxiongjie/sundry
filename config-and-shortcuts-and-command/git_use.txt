@@ -15,6 +15,12 @@ git add filename
 git clone
 
 #
+git fetch
+
+# catch and merge.
+git pull == (git fetch + git merge)
+
+#
 git pull
 
 #
@@ -32,9 +38,25 @@ git branch
 #
 git checkout
 
+
+
 #
 git merge
 
 #
 git rebase
+
+
+
+# move HEAD     HEAD^^^ == HEAD~3
+git checkout commit_name
+
+# move branch
+git branch -f main commit_name
+
+
+# reset
+git reset
+# do to undo
+git revert
 
