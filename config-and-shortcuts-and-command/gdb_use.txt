@@ -1,4 +1,115 @@
 
+######## 观察点 ##########
+
+
+
+
+
+# 控制断点的命令
+disable
+enable
+delete
+
+# 查看变量地址
+print &variable
+
+# 设置一个观察点，当变量的值发生变化时程序停止
+watch variable
+
+
+
+######## 断点 ##########
+
+
+
+# 忽略断点
+ignore bnum count # 接下来 count 次编号为 bnum 的断点触发都不会让程序中断，只有第 count + 1 次断点触发才会让程序中断。
+
+
+# 条件断点，当条件满足时，断点才被触发
+break ... if cond  # ... 是判断的位置（即行号），cond 是一个逻辑表达式。
+
+# 临时断点生效一次之后就会自动删除
+tbreak 设置临时断点
+
+# 使用如下命令将设置的断点保存下来
+save breakpoints file-name-to-save
+# 使用如下命令批量设置保存的断点
+source file-name-to-save
+
+info breakpoints # 打印断点信息
+
+# 在文件行号上打断点
+# 通过行号设置断点的一个弊端是，如果你更改了源程序，那么之前设置的断点就可能不是你想要的。
+break linenum  # linenum 行号
+break filename:linenum # 在某个文件的某行上打断点
+
+
+# entry point 程序入口点
+
+# 在 gdb 中查看调试文件信息也可以获取其入口点
+file *.elf
+info files
+
+# 通过读取调试文件的头部信息获取其入口地址
+readelf -h *.elf
+
+
+break
+
+# 在程序地址上打断点
+break *addr
+
+
+
+######## 函数 ##########
+
+
+# 当程序暂停后，可以使用 up n 或者 down n 命令向上或向下切换函数堆栈帧，其中 n 是层数。
+
+
+# 当程序暂停后，可以用 frame n 命令选择函数堆栈帧，其中 n 可以由 backtrace 得到。
+# 也可以使用 frame addr 命令选择函数堆栈帧，其中 addr 是堆栈地址。
+
+#
+backtrace
+
+#
+beark 断点
+
+# 设置这个属性可以使用 info frame 查看函数尾调用的相关信息
+set debug entry-values 1
+
+#当一个函数最后一条指令是调用另外一个函数时，开启优化选项的编译器常常以最后被调用的函数返回值作为被调用者的返回值，这称为“tail call” 即尾调用。
+
+# 打印函数汇编指令
+disassemble func
+
+
+# 打印当前函数寄存器信息
+info registers
+
+# 打印函数堆栈信息
+info frame
+
+
+# 使用 gdb 调试程序时，可以使用 call 或者 print
+命令直接调用函数执行，并打印结果。
+call
+print
+
+# 当单步调试一个函数时，如果不想继续跟踪下去，可以有两种方法退出；
+finish # 继续执行后面的语句并退出当前函数
+return # 不继续执行下面的语句，直接返回正在调试的函数
+
+set step-mode on # 使 gdb 可以进入不带调试信息的函数；
+# 默认情况 gdb 不会进入不带调试信息的函数；
+
+list # 列出执行代码
+load # ???
+file # 指定调试文件
+step # 进入函数继续执行
+start # 开始单步调试
 
 info thread # 查看线程信息
 thread thread_id # 切换工作线程
@@ -23,7 +134,14 @@ file # add debug file.
 print # print variable value.
 disassemble # disassembling.
 
-# condition breakpoint. 
+# 在 gdb 中执行shell。
+shell commandline
+
+# 开启 gdb 的调试日志功能
+set logging on
+
+
+# condition breakpoint.
 
 # content breakpoint.
 start # one step debug.
@@ -39,22 +157,26 @@ watch # write breakpoint.
 
 
 
+
+
 gdb
 gcc -g 可生成待调试信息的输出文件。
 gdb filename.elf;
-l 从第一行开始列出源码。
+list 从第一行开始列出源码。
 直接回车可重复执行上一次命令。
-b line_number 在 line_number 处打上断点。
-b function_name 在某个函数入口处打上断点。breakpoint
-r run 开始调试运行;
-n next 单步运行（单步调试）（如果遇到函数会直接跳出。）;
-s 进入函数内部执行;
-c continue 继续运行;
-p variable_name printf 打印变量值;
-bt 查看函数堆栈;
+breakpoint line_number 在 line_number 处打上断点。
+breakpoint function_name 在某个函数入口处打上断点。breakpoint
+run run 开始调试运行;
+next next 单步运行（单步调试）（如果遇到函数会直接跳出。）;
+step 进入函数内部执行;
+continue continue 继续运行;
+print variable_name printf 打印变量值;
+backtrace 查看函数堆栈;
 f stack_id 切换堆栈到stack_id，stack_id 使用 bt 查看;
 finish 退出函数;
 q quit 退出 gdb;
 info breakpoints 打印断点信息;
 start 单步执行;
 next 执行下一步;
+
+

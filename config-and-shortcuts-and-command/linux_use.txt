@@ -1,6 +1,10 @@
 
 
+# vscode 打开终端
+Ctrl + ~
 
+# hide windows, show windows
+Ctrl + Alt + d
 
 # use tips
 Ctrl + f

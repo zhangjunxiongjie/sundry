@@ -1,15 +1,25 @@
 
 
 # other
-	tmux # 终端会话管理
+    ulimit -c unlimited # 解除 core(segement, core dump) 文件大小限制
+    tmux # 终端会话管理
 	htop # 系统监视功能
 	systemctl # 管理系统服务
-	
+
 	source config_file # config file action
     wc # total.
 
 	ssh -p port user@host # ssh login.
 	ssh-keygen # create key.
+
+# program debug
+    readelf # 解析 elf 文件
+    strip # 删掉 elf 文件中的符号信息，防破解。
+    nm # 读文件符号信息
+    od # 以二级制格式查看文件
+    objdump #
+    ldd # 查看可执行文件使用到的共享库（动态库）
+    strace #
 
 # program build.
 	make -j(number) # multi core build.
@@ -26,6 +36,8 @@
 	fg job_number 将后台程序放到前台
 	jobs 列出后台运行程序
 
+    sudo netstat -nltp # 查看系统中那些端口被那个进程监听；
+    sudo netstat -nltp | grep pid # 查看进程号监听的端口号；
 	sudo lsof -i:port # 查看使用此端口号的进程；
 
 
@@ -40,11 +52,12 @@
 	watch -n 0.1 free -h # free是内存显示命令，-h是以人类能读懂的格式显示
 
 # network manage
+    netcat # network
 
     wget source_url direct_path # download file.
 
     # add network adapter's ip address.
-	sudo ifconfig enp2s0:0 192.168.6.155 netmask 255.255.255.0 broadcast 192.168.6.255 up
+	sudo ifconfig enp2s0:1 192.168.6.155 netmask 255.255.255.0 broadcast 192.168.6.255 up
 
 # file manage
 	mkdir postfix{1..2} # mkdir postfix1 postfix2 postfix3...
