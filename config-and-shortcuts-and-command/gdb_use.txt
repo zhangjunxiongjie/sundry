@@ -1,9 +1,47 @@
 
+
+
+
+# 解除 shell 中执行程序时生成 core dump 文件的大小限制
+ulimit -c unlimited
+
+
+######## 打印 ##########
+
+
+
+# 打印 ASCII 字符串
+x/s
+
+
+######## 捕获点 ##########
+# 多进程调试
+
+
+# gdb 可以设置寄存器的值，在调试过程中改变寄存器的值
+# 以达到改变程序行为的目的
+set $register = value.
+
+catchpoint
+tcatch
+catch
+
+
+
 ######## 观察点 ##########
 
 
+# gdb 可以设置读写观察点，当变量发生读写时，程序中断
+awatch variable
 
+# gdb 可以设置读观察点，就是当变量发生读取行为时，程序暂停
+rwatch variable.
 
+# 设定观察点只对特定线程(threadnum)生效
+watch variable thread threadnum # 观察 variable 变量
+
+# 查看观察点信息
+info watchpoints
 
 # 控制断点的命令
 disable
@@ -14,7 +52,7 @@ delete
 print &variable
 
 # 设置一个观察点，当变量的值发生变化时程序停止
-watch variable
+watch variable # 写观察点
 
 
 

@@ -1,4 +1,9 @@
 
+
+
+gcc xxx.c -o a.out -L 库目录 -l 具体的库文件名 -I 库的头文件
+
+
 预处理文件扩展名：.r (replace 替换)
 编译后文件扩展名：.a (asm 汇编)
 汇编后文件扩展名：.o (object 目标文件)
@@ -24,24 +29,24 @@ gcc -x c hello.pig 　　
 -c
 只激活预处理,编译,和汇编,也就是他只把程序做成obj文件
 例子用法:
-gcc -c hello.c 
+gcc -c hello.c
 他将生成 .o 的 obj 文件
 
 -S
 只激活预处理和编译，就是指把文件编译成为汇编代码。
 例子用法:
-gcc -S hello.c 
+gcc -S hello.c
 他将生成 .s 的汇编代码，你可以用文本编辑器察看。
 
 -E
 只激活预处理,这个不生成文件, 你需要把它重定向到一个输出文件里面。
 例子用法:
-gcc -E hello.c > pianoapan.r (replace 替换) 
-gcc -E hello.c | more 
+gcc -E hello.c > pianoapan.r (replace 替换)
+gcc -E hello.c | more
 
 -o
 制定目标名称, 默认的时候, gcc 编译出来的文件是 a.out, 很难听, 如果你和我有同感，改掉它, 哈哈。
 例子用法:
-gcc -o hello.exe hello.c (哦,windows用习惯了) 
+gcc -o hello.exe hello.c (哦,windows用习惯了)
 gcc -o hello.asm -S hello.c
 

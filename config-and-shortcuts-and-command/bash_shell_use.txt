@@ -2,6 +2,7 @@
 
 # other
     ulimit -c unlimited # 解除 core(segement, core dump) 文件大小限制
+    ulimit -a # 显示当前 shell 的所有限制信息
     tmux # 终端会话管理
 	htop # 系统监视功能
 	systemctl # 管理系统服务
