@@ -3,7 +3,9 @@
 
 
 # 解除 shell 中执行程序时生成 core dump 文件的大小限制
+# 使用 ulimit 解除 core 文件大小的限制才能生成 core dump 文件
 ulimit -c unlimited
+gdb *.elf core # 调试核心转储文件
 
 
 ######## 打印 ##########
