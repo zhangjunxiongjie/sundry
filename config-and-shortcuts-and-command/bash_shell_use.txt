@@ -33,9 +33,11 @@
 	which command
 
 # process manage
-	bg job_number 将前台程序放到后台
-	fg job_number 将后台程序放到前台
-	jobs 列出后台运行程序
+	bg job_number # 将前台程序放到后台
+	fg job_number # 将后台程序放到前台
+	process &   # 将任务 process 放在后台运行
+	Ctrl + Z # 暂停任务执行
+	jobs # 列出后台运行程序
 
     sudo netstat -nltp # 查看系统中那些端口被那个进程监听；
     sudo netstat -nltp | grep pid # 查看进程号监听的端口号；
@@ -53,8 +55,10 @@
 	watch -n 0.1 free -h # free是内存显示命令，-h是以人类能读懂的格式显示
 
 # network manage
+	tcpdump # 
+	fping # 
     netcat # network
-
+	traceroute  # 路由跟踪
     wget source_url direct_path # download file.
 
     # add network adapter's ip address.
