@@ -1,0 +1,13 @@
+C51 COMPILER V9.60.0.0   FAT                                                               09/14/2021 15:51:47 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE FAT
+OBJECT MODULE PLACED IN FAT.OBJ
+COMPILER INVOKED BY: D:\Keil-C51\C51\BIN\C51.EXE FAT.C OPTIMIZE(8,SPEED) BROWSE INCDIR(E:\Electric\keil-c51\C51\INC\Atme
+                    -l) DEBUG OBJECTEXTEND
+
+line level    source
+
+*** ERROR C318 OF FAT.C: can't open file 'FAT.C'
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  1 ERROR(S)

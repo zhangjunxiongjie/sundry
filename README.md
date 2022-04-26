@@ -13,3 +13,4 @@
 - UNIX-system-programming   UNIX 系统编程 代码示例；
 - VS-project   Visual Studio 项目；
 - AssemblerLanguageProgramming   8051 汇编语言程序设计概述；
+- 圈圈教你玩USB   使用 51 单片机及 USB 外设芯片实现 USB 常用设备示例；

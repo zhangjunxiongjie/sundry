@@ -1,0 +1,13 @@
+C51 COMPILER V9.60.0.0   SCSI                                                              09/14/2021 15:51:47 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE SCSI
+OBJECT MODULE PLACED IN SCSI.OBJ
+COMPILER INVOKED BY: D:\Keil-C51\C51\BIN\C51.EXE SCSI.c OPTIMIZE(8,SPEED) BROWSE INCDIR(E:\Electric\keil-c51\C51\INC\Atm
+                    -el) DEBUG OBJECTEXTEND
+
+line level    source
+
+*** ERROR C318 OF SCSI.c: can't open file 'SCSI.c'
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  1 ERROR(S)
